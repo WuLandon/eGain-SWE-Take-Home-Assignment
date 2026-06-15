@@ -1,14 +1,14 @@
-# Package Tracker Chatbot
+# Package Tracker Chatbot Prototype
 
-A command-line customer service chatbot that helps users track lost packages, view shipment status updates, and initiate a missing package claim when necessary.
+A command-line customer service chatbot that helps users track lost packages.
 
-This project was developed as part of the eGain Software Engineer Take-Home Assignment.
+This project demonstrates a chatbot conversation flow for helping a customer track a lost package.
 
 ---
 
 ## Overview
 
-The chatbot guides users through a package tracking workflow using a decision-tree conversation design. Users can:
+The chatbot helps customers track missing packages through a guided customer service workflow. Users can:
 
 - Check the status of a package using a tracking number
 - Receive shipment updates for packages that are in transit or delayed
@@ -16,13 +16,11 @@ The chatbot guides users through a package tracking workflow using a decision-tr
 - Initiate a missing package claim for delivered packages
 - Recover from invalid or unexpected inputs through error handling
 
-The goal was to create a simple but realistic customer service experience that demonstrates conversation design, problem solving, and clean implementation.
-
 ---
 
 ## Approach
 
-The chatbot was designed around a structured conversation flow that mirrors a real package tracking support interaction.
+The chatbot was designed around a [decision-tree](#conversation-flowchart) conversation flow that helps users navigate package tracking and delivery issues in a clear and intuitive way.
 
 ### Key Conversation Paths
 
@@ -41,25 +39,13 @@ The chatbot handles several unexpected input scenarios, including:
 - Tracking number not found
 - Invalid responses to yes/no questions
 
-This ensures the user can recover from mistakes and continue the conversation successfully.
+This ensures the user can recover from mistakes or receive additional guidance to continue the conversation successfully.
 
 ---
 
-## Conversation Flow
+## Conversation Flowchart
 
-![Conversation Flow](docs/flowchart.png)
-
----
-
-## Features
-
-- Package tracking by tracking number
-- Tracking number assistance
-- Shipment status updates
-- Missing package claim creation
-- Input validation
-- Error handling and recovery
-- Clean command-line interface
+![Conversation Flow](/docs/flowchart.png)
 
 ---
 
@@ -69,7 +55,7 @@ This ensures the user can recover from mistakes and continue the conversation su
 
 ```bash
 git clone <repository-url>
-cd package-tracker-chatbot
+cd eGain-SWE-Take-Home-Assignment
 ```
 
 ### Run the Chatbot
@@ -86,17 +72,17 @@ No external dependencies are required.
 
 The following recording demonstrates:
 
-- Finding a tracking number
-- Invalid tracking number handling
-- Tracking number not found handling
-- Delivered package workflow
-- Missing package claim creation
+1. Helping a user locate their tracking number
+2. Handling an invalid tracking number entry
+3. Handling a tracking number that is not found in the system
+4. Viewing delivery status and package details
+5. Creating a missing package claim for a delivered package
 
-![Package Tracker Demo](demo.gif)
+![Package Tracker Demo](/demos/demo.gif)
 
 ---
 
-## Example Conversation
+## Demo Conversation
 
 ```text
 Welcome to Package Tracker!
@@ -153,19 +139,6 @@ package-tracker-chatbot/
     ├── tracking_data.py
     └── user_input.py
 ```
-
----
-
-## Future Improvements
-
-Given more time, I would expand the chatbot with additional customer service capabilities:
-
-- Human-agent escalation for unresolved issues
-- Additional package statuses and delivery exceptions
-- Real shipping carrier API integration
-- Email or SMS delivery notifications
-- Order number lookup support
-- Claim status tracking after submission
 
 ---
 
