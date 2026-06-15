@@ -54,7 +54,7 @@ This ensures the user can recover from mistakes or receive additional guidance t
 ### Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/WuLandon/eGain-SWE-Take-Home-Assignment.git
 cd eGain-SWE-Take-Home-Assignment
 ```
 
